@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AppNetBlocker</string>
+
+    <!-- Bildirim -->
+    <string name="notification_channel_name">Yerel VPN Güvenlik Duvarı</string>
+    <string name="notification_channel_description">Seçili uygulamaların internet erişimi AppNetBlocker tarafından engellendiğinde gösterilir.</string>
+    <string name="notification_title">AppNetBlocker Etkin</string>
+    <plurals name="notification_blocking_apps">
+        <item quantity="one">%d uygulama engelleniyor (yerel VPN)</item>
+        <item quantity="other">%d uygulama engelleniyor (yerel VPN)</item>
+    </plurals>
+    <string name="notification_starting">Yerel VPN başlatılıyor…</string>
+    <string name="notification_action_stop">Durdur</string>
+
+    <!-- Ana ekran durumu -->
+    <plurals name="status_blocking_apps">
+        <item quantity="one">%d uygulama engelleniyor</item>
+        <item quantity="other">%d uygulama engelleniyor</item>
+    </plurals>
+    <string name="status_off">Kapalı</string>
+    <string name="status_subtitle_on">Seçili uygulamaların internet erişimi kesildi. Diğer uygulamalar normal çalışır.</string>
+    <string name="status_subtitle_off_none">Aşağıdan bir veya daha fazla uygulama seçin, ardından engellemeyi açın.</string>
+    <plurals name="status_subtitle_off_ready">
+        <item quantity="one">%d uygulama seçili. İnternet erişimini kesmek için açın.</item>
+        <item quantity="other">%d uygulama seçili. İnternet erişimini kesmek için açın.</item>
+    </plurals>
+    <string name="toggle_vpn_cd">Uygulama ağ engelleyiciyi aç veya kapat</string>
+
+    <!-- Uyarı kartları -->
+    <string name="warning_another_vpn_title">Başka bir VPN etkin</string>
+    <string name="warning_another_vpn_body">Android aynı anda yalnızca bir VPN’e izin verir. AppNetBlocker açıldığında diğer VPN bağlantısı kesilir.</string>
+    <string name="warning_service_killed_title">Engelleyici hizmet sistem tarafından durduruldu</string>
+    <string name="warning_service_killed_body">Cihazınız VPN hizmetini arka planda durdurdu. Daha kararlı çalışma için Ayarlar’dan pil optimizasyonunu kapatın ve Her zaman açık VPN’i etkinleştirin.</string>
+    <string name="warning_vpn_revoked_title">VPN izni iptal edildi</string>
+    <string name="warning_vpn_revoked_body">Başka bir VPN devreye girdi veya sistem ayarlarından VPN erişimi kaldırıldı. Korumayı sürdürmek için engellemeyi yeniden açın.</string>
+    <string name="warning_establish_failed_title">Yerel VPN başlatılamadı</string>
+    <string name="warning_establish_failed_body">Android yerel VPN tünelini oluşturamadı. Çakışan kilitli bir VPN profili olmadığını doğrulayıp yeniden deneyin.</string>
+    <string name="warning_boot_restricted_title">Açılışta otomatik başlatma Android tarafından engellendi</string>
+    <string name="warning_boot_restricted_body">Android 14 ve sonrası yeniden başlatma sonrasında arka plan hizmetlerini kısıtlayabilir. Otomatik başlatma için sistem VPN ayarlarından Her zaman açık VPN’i etkinleştirin.</string>
+    <string name="warning_work_profile_title">İş profili veya çift uygulama notu</string>
+    <string name="warning_work_profile_body">Android VPN kuralları kullanıcı profili başına uygulanır. Engelleme iş profili, Çift Uygulama veya Güvenli Klasör içindeki uygulamalarda çalışmayabilir.</string>
+    <string name="action_open_settings">Ayarları Aç</string>
+    <string name="action_dismiss">Kapat</string>
+
+    <!-- Uygulama listesi ve arama -->
+    <string name="search_apps_hint">Uygulama veya paket adı ara…</string>
+    <string name="clear_search_cd">Aramayı temizle</string>
+    <string name="quick_pick_chip">Hızlı seçim</string>
+    <string name="show_system_apps">Sistem uygulamalarını göster</string>
+    <string name="section_selected_apps">Seçilenler (%d)</string>
+    <string name="section_other_apps">Tüm uygulamalar (%d)</string>
+    <string name="badge_system">Sistem</string>
+    <string name="badge_work_dual_note">İş / çift profil — çalışmayabilir</string>
+    <string name="empty_apps_search">Eşleşen uygulama bulunamadı.</string>
+    <string name="loading_apps">Yüklü uygulamalar yükleniyor…</string>
+
+    <!-- Hızlı seçim penceresi -->
+    <string name="quick_pick_title">Paket adıyla hızlı seç</string>
+    <string name="quick_pick_description">Bir uygulamayı seçip üste sabitlemek için tam Android paket adını girin (örneğin: com.easybrain.killer.sudoku).</string>
+    <string name="quick_pick_label">Paket adı</string>
+    <string name="quick_pick_placeholder">com.ornek.uygulama</string>
+    <string name="quick_pick_not_installed">Bu paket bu cihazda yüklü değil.</string>
+    <string name="quick_pick_select">Seç</string>
+    <string name="action_cancel">İptal</string>
+
+    <!-- İlk açılış yerel VPN açıklaması -->
+    <string name="vpn_explain_title">Yerel VPN İzni</string>
+    <string name="vpn_explain_body">Bu yerel bir VPN’dir. Hiçbir veri dışarı gönderilmez.\n\nAppNetBlocker, yalnızca seçtiğiniz uygulamaların trafiğini cihaz üzerinde yakalayıp yerel olarak düşürmek için Android’in VpnService arayüzünü kullanır. Diğer tüm uygulamalar normal bağlantınızı kullanmaya devam eder ve AppNetBlocker internet izni istemez.</string>
+    <string name="vpn_explain_continue">Devam Et</string>
+
+    <!-- Mesajlar -->
+    <string name="msg_no_apps_selected">Önce en az bir uygulama seçin.</string>
+    <string name="msg_vpn_stopped_empty">Tüm seçimler kaldırıldı. Engelleyici kapatıldı.</string>
+    <string name="msg_package_selected">%s seçildi</string>
+    <string name="msg_package_not_found">Paket bulunamadı: %s</string>
+    <string name="msg_vpn_permission_denied">VPN izni verilmedi.</string>
+
+    <!-- Ayarlar ve Yardım ekranı -->
+    <string name="settings_title">Ayarlar ve Yardım</string>
+    <string name="navigate_back_cd">Geri</string>
+    <string name="settings_cd">Ayarlar ve Yardım</string>
+    <string name="settings_reliability_header">Kararlılık</string>
+    <string name="settings_always_on_title">Her zaman açık VPN</string>
+    <string name="settings_always_on_desc">Android 14 ve 15’te önerilir. Sistem VPN ayarlarından etkinleştirildiğinde Android, AppNetBlocker’ı çalışır tutar ve yeniden başlatma sonrasında başlatır. Seçili olmayan uygulamaların internete çıkabilmesi için \"VPN olmadan bağlantıları engelle\" seçeneğini KAPALI bırakın.</string>
+    <string name="settings_always_on_button">VPN Ayarlarını Aç</string>
+    <string name="settings_battery_title">Pil optimizasyonu</string>
+    <string name="settings_battery_status_unrestricted">Durum: Kısıtlanmamış (önerilen)</string>
+    <string name="settings_battery_status_optimized">Durum: Optimize edilmiş (sistem hizmeti kapatabilir)</string>
+    <string name="settings_battery_desc">Android ve üretici güç yöneticileri (Samsung, Xiaomi, Oppo, Huawei) arka plan hizmetlerini sonlandırabilir. Muafiyet vermek beklenmedik durmaları önler.</string>
+    <string name="settings_battery_button">Pil Optimizasyonunu Kapat</string>
+    <string name="settings_autostart_title">Açılışta otomatik başlat</string>
+    <string name="settings_autostart_desc">VPN izni daha önce verilmişse yeniden başlatma sonrasında engellemeyi otomatik başlatmayı dener. Android 14+ açılışta arka plan başlatmayı kısıtlarsa Her zaman açık VPN daha güvenilirdir.</string>
+    <string name="settings_how_it_works_title">Nasıl çalışır?</string>
+    <string name="settings_how_it_works_body">AppNetBlocker, VpnService.Builder.addAllowedApplication() kullanarak yalnızca cihaz içi bir VPN tüneli oluşturur. Yalnızca seçtiğiniz uygulamalar tünele girer; IPv4 ve IPv6 paketleri iletilmeden ve harici DNS kullanılmadan yerel olarak düşürülür. Diğer uygulamalar VPN’i atlar.</string>
+    <string name="settings_about_title">Hakkında ve Bağlantılar</string>
+    <string name="settings_about_body">AppNetBlocker v%s\nMIT Lisansı altında açık kaynak.\nİnternet izni yok, analiz yok, veri toplama yok.</string>
+    <string name="settings_github_button">GitHub Deposu</string>
+    <string name="settings_dkma_button">Üretici Arka Plan Kısıt Çözümleri (dontkillmyapp.com)</string>
+    <string name="error_no_browser">Bu işlemi açabilecek bir tarayıcı veya ayar uygulaması bulunamadı.</string>
+</resources>

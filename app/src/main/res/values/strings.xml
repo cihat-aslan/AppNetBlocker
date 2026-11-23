@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AppNetBlocker</string>
+
+    <!-- Notification -->
+    <string name="notification_channel_name">Local VPN Firewall</string>
+    <string name="notification_channel_description">Shows when AppNetBlocker is blocking internet access for selected apps.</string>
+    <string name="notification_title">AppNetBlocker Active</string>
+    <plurals name="notification_blocking_apps">
+        <item quantity="one">Blocking %d app (local VPN)</item>
+        <item quantity="other">Blocking %d apps (local VPN)</item>
+    </plurals>
+    <string name="notification_starting">Starting local VPN…</string>
+    <string name="notification_action_stop">Stop</string>
+
+    <!-- Main screen status -->
+    <plurals name="status_blocking_apps">
+        <item quantity="one">Blocking %d app</item>
+        <item quantity="other">Blocking %d apps</item>
+    </plurals>
+    <string name="status_off">Off</string>
+    <string name="status_subtitle_on">Selected apps have no internet access. Other apps work normally.</string>
+    <string name="status_subtitle_off_none">Select one or more apps below, then turn on blocking.</string>
+    <plurals name="status_subtitle_off_ready">
+        <item quantity="one">%d app selected. Toggle on to block its internet access.</item>
+        <item quantity="other">%d apps selected. Toggle on to block their internet access.</item>
+    </plurals>
+    <string name="toggle_vpn_cd">Toggle app network blocker</string>
+
+    <!-- Warning cards -->
+    <string name="warning_another_vpn_title">Another VPN is active</string>
+    <string name="warning_another_vpn_body">Android only allows one active VPN at a time. Turning AppNetBlocker on will disconnect the other VPN.</string>
+    <string name="warning_service_killed_title">Blocker service was stopped by the system</string>
+    <string name="warning_service_killed_body">Your device stopped the VPN service in the background. Disable battery optimization and enable Always-on VPN in Settings for better reliability.</string>
+    <string name="warning_vpn_revoked_title">VPN permission was revoked</string>
+    <string name="warning_vpn_revoked_body">Another VPN took over or VPN access was removed in system settings. Toggle blocking on again to restore protection.</string>
+    <string name="warning_establish_failed_title">Could not start local VPN</string>
+    <string name="warning_establish_failed_body">Android could not create the local VPN tunnel. Check that no conflicting VPN profile is locked and try again.</string>
+    <string name="warning_boot_restricted_title">Auto-start on boot was blocked by Android</string>
+    <string name="warning_boot_restricted_body">Android 14+ can restrict background service starts after reboot. Enable Always-on VPN in system VPN settings so Android starts AppNetBlocker automatically.</string>
+    <string name="warning_work_profile_title">Work profile or dual-app note</string>
+    <string name="warning_work_profile_body">Android VPN rules apply per user profile. Blocking may not work for apps running inside a work profile, Dual Apps, or Secure Folder.</string>
+    <string name="action_open_settings">Open Settings</string>
+    <string name="action_dismiss">Dismiss</string>
+
+    <!-- App list & search -->
+    <string name="search_apps_hint">Search apps or package name…</string>
+    <string name="clear_search_cd">Clear search</string>
+    <string name="quick_pick_chip">Quick pick</string>
+    <string name="show_system_apps">Show system apps</string>
+    <string name="section_selected_apps">Selected (%d)</string>
+    <string name="section_other_apps">All apps (%d)</string>
+    <string name="badge_system">System</string>
+    <string name="badge_work_dual_note">Work / dual profile — may not work</string>
+    <string name="empty_apps_search">No matching apps found.</string>
+    <string name="loading_apps">Loading installed apps…</string>
+
+    <!-- Quick pick dialog -->
+    <string name="quick_pick_title">Quick pick by package name</string>
+    <string name="quick_pick_description">Enter an exact Android package name (for example, com.easybrain.killer.sudoku) to select and pin an app.</string>
+    <string name="quick_pick_label">Package name</string>
+    <string name="quick_pick_placeholder">com.example.app</string>
+    <string name="quick_pick_not_installed">This package is not installed on this device.</string>
+    <string name="quick_pick_select">Select</string>
+    <string name="action_cancel">Cancel</string>
+
+    <!-- First-launch VPN explanation dialog -->
+    <string name="vpn_explain_title">Local VPN Permission</string>
+    <string name="vpn_explain_body">This is a local VPN. No traffic is sent anywhere.\n\nAppNetBlocker uses Android\'s VpnService on your device to intercept traffic only from the apps you select and drop their packets locally. All other apps keep working normally, and AppNetBlocker does not request the internet permission.</string>
+    <string name="vpn_explain_continue">Continue</string>
+
+    <!-- Messages / Snackbars -->
+    <string name="msg_no_apps_selected">Select at least one app first.</string>
+    <string name="msg_vpn_stopped_empty">All apps unselected. Blocker turned off.</string>
+    <string name="msg_package_selected">Selected %s</string>
+    <string name="msg_package_not_found">Package not found: %s</string>
+    <string name="msg_vpn_permission_denied">VPN permission was not granted.</string>
+
+    <!-- Settings & Help screen -->
+    <string name="settings_title">Settings &amp; Help</string>
+    <string name="navigate_back_cd">Back</string>
+    <string name="settings_cd">Settings &amp; Help</string>
+    <string name="settings_reliability_header">Reliability</string>
+    <string name="settings_always_on_title">Always-on VPN</string>
+    <string name="settings_always_on_desc">Recommended on Android 14 and 15. When enabled in system VPN settings, Android keeps AppNetBlocker active and restarts it after a reboot. Keep \"Block connections without VPN\" OFF so unselected apps still have internet.</string>
+    <string name="settings_always_on_button">Open VPN Settings</string>
+    <string name="settings_battery_title">Battery optimization</string>
+    <string name="settings_battery_status_unrestricted">Status: Unrestricted (recommended)</string>
+    <string name="settings_battery_status_optimized">Status: Optimized (system may stop service)</string>
+    <string name="settings_battery_desc">Android and OEM power managers (Samsung, Xiaomi, Oppo, Huawei) can kill background services. Granting exemption prevents unexpected stops.</string>
+    <string name="settings_battery_button">Disable Battery Optimization</string>
+    <string name="settings_autostart_title">Auto-start on boot</string>
+    <string name="settings_autostart_desc">Try to restart blocking automatically after reboot if VPN permission was already granted. On Android 14+, Always-on VPN is more reliable if the OS restricts boot background starts.</string>
+    <string name="settings_how_it_works_title">How it works</string>
+    <string name="settings_how_it_works_body">AppNetBlocker creates a local-only VPN tunnel using VpnService.Builder.addAllowedApplication(). Only the apps you select enter the tunnel; their IPv4 and IPv6 packets are read and dropped locally without forwarding or external DNS. All other apps bypass the VPN.</string>
+    <string name="settings_about_title">About &amp; Links</string>
+    <string name="settings_about_body">AppNetBlocker v%s\nOpen-source under the MIT License.\nNo internet permission, no analytics, no data collection.</string>
+    <string name="settings_github_button">GitHub Repository</string>
+    <string name="settings_dkma_button">OEM Background Fix Guide (dontkillmyapp.com)</string>
+    <string name="error_no_browser">No browser or settings screen available to handle this action.</string>
+</resources>
